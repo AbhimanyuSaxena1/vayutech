@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 import '../swiper/style.css';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 
-const ImageCorusal = () => {
+const ImageCorausel = () => {
   return (
     <div className=' rounded-2xl w-full h-[90vh]'>
     <Swiper
@@ -41,4 +41,4 @@ const ImageCorusal = () => {
   )
 }
 
-export default ImageCorusal
+export default ImageCorausel
