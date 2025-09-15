@@ -15,7 +15,7 @@ function App() {
     setLoading(true);
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 5000); // Animation duration
+    }, 3000); // Animation duration
     return () => clearTimeout(timer);
   }, [location]);
 

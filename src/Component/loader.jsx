@@ -17,14 +17,7 @@ const Loader = () => {
     });
 
     timeline
-      .from(
-        logo,
-        {
-          bottom: '10%', // Start from the right bottom
-          right: '40',
-          scale: 1,
-          duration:1
-        })
+     
        .to(
         logo,
         {
@@ -37,7 +30,7 @@ const Loader = () => {
       )
       .to(logo, {
         scale: 2, // Scale up
-        duration: 1,
+        duration: .5,
         ease: 'power2.inOut',
       })
       .to(logo, {
@@ -49,7 +42,7 @@ const Loader = () => {
         top: '5%', // Move to the top left corner (adjust as needed)
         left: '5.9%',
         
-        duration: 1.5,
+        duration: 1,
         ease: 'power2.inOut',
       })
       .to([ loader], {
