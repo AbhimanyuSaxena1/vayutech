@@ -102,7 +102,7 @@ const Products = () => {
         </p>
       </div>
 
-      <div className="right z-20 w-1/2 gap-10 flex flex-col items-center justify-between">
+      <div className="right z-20 w-1/2 p-10 gap-10 flex flex-col items-center justify-between">
         {productsData.map(({ imageSrc, videoSrc, title }, index) => (
           <ProductCard
             key={index}
