@@ -28,7 +28,7 @@ const ProductCard = ({ imageSrc, videoSrc, title }) => {
   return (
     <div
       className="group flex flex-col relative items-start p-4 justify-end w-full h-[50vh] rounded-lg shadow-md border border-transparent cursor-pointer overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl  transform hover:scale-105"
-      onClick={handleTogglePlay}
+      onMouseEnter={handleTogglePlay}
       onMouseLeave={handleMouseLeave}
     >
       <img
@@ -41,7 +41,7 @@ const ProductCard = ({ imageSrc, videoSrc, title }) => {
       <video
         ref={videoRef}
         src={videoSrc}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+        className={`absolute z-20 inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         muted
@@ -62,25 +62,25 @@ const productsData = [
     title: 'Agriculture',
     imageSrc:
       'service1.jpg',
-    videoSrc: '/videos/agriculture.mp4',
+    videoSrc: '/videos/agriculture.mp4' ,
   },
   {
     title: 'Construction',
     imageSrc:
       'service2.jpg',
-    videoSrc: '/videos/construction.mp4',
+    videoSrc: '/videos/agriculture.mp4' ,
   },
   {
     title: 'Disaster Management, Mapping & Survey',
     imageSrc:
       'service3.jpg',
-    videoSrc: '/videos/disaster.mp4',
+    videoSrc :'/videos/agriculture.mp4' ,
   },
   {
     title: 'Consultation & Training',
     imageSrc:
       'service1.jpg',
-    videoSrc: '/videos/consultation.mp4',
+    videoSrc: '/videos/agriculture.mp4' ,
   },
 ];
 
