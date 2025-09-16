@@ -40,8 +40,8 @@ const ProductCard = ({ imageSrc, videoSrc, title }) => {
       />
       <video
         ref={videoRef}
-        src={videoSrc}
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+        src={'/videos/record.mp4'}
+        className={`absolute z-20 inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         muted
@@ -62,7 +62,8 @@ const productsData = [
     title: 'Agriculture',
     imageSrc:
       'service1.jpg',
-    videoSrc: '/videos/agriculture.mp4',
+
+    videoSrc: '/videos/record.mp4',
   },
   {
     title: 'Construction',
