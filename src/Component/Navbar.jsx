@@ -85,7 +85,7 @@ const Navbar = () => {
           Contact
         </button>
    </Link> */}
-    <Btn ref={buttonRef} name="Contact US" link="/contactus">
+    <Btn className="md:hidden" ref={buttonRef} name="Contact US" link="/contactus">
 
     </Btn>
       </div>
