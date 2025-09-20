@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Home from './Pages/Home';
-import Services from './Pages/Services';
+import Services from './Pages/Services/Services';
 import Loader from './Component/loader';
 import { Route, Routes } from 'react-router-dom';
 import ContactUs from './Pages/ContactUs';
 import Navbar from './Component/Navbar';
-
+import ServiceDetails from './Pages/Services/serviceDetails';
 function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
@@ -27,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:id" element={<ServiceDetails />} />
           <Route path="/contactus" element={<ContactUs />} />
         </Routes>
       )}

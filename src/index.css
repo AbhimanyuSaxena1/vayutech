@@ -1,6 +1,13 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fredericka+the+Great&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: 'Antonio';
+  src: url('./assets/fonts/Antonio-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-.loading {
-  overflow: hidden;
+.antonio {
+  font-family: 'Antonio', sans-serif;
 }
