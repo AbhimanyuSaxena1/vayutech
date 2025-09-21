@@ -75,9 +75,9 @@ const Services = () => {
   return (
 
     <main className='w-full min-h-[90vh] '>
-      <article className='w-[100%] p-10  flex flex-col leading-nonr h-[40vh]'>
+      <article className='w-[100%] p-10  flex flex-col leading-nonr md:h-[40vh] h-[20vh] py-10  lg:h-[40vh]'>
           <h1 className='text-black text-[1rem] px-3 py-1 bg-yellow-400 w-fit rounded-full font-left font-[Antonio]  '>Our Services</h1>
-            <h1 className='exp text-[7rem] text-black font-extralight font-[Antonio]'>Explore Full Range of Our Products</h1>
+            <h1 className='exp text-[2rem] md:text-[7rem] lg:text-[7rem] text-black font-extralight font-[Antonio]'>Explore Full Range of Our Products</h1>
       </article>
       <section className='py-10 flex flex-wrap items-center justify-center gap-10 px-10 min-h-[50vh] mx-auto max-w-xl-screen'>
        {
