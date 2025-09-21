@@ -40,8 +40,8 @@ const ProductCard = ({ imageSrc, videoSrc, title }) => {
       />
       <video
         ref={videoRef}
-        src={videoSrc}
-        className={`absolute z-20 inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+        src={'/videos/record.mp4'}
+        className={`absolute z-20 z-20 inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         muted
