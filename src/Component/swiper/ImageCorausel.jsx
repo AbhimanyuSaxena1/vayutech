@@ -14,7 +14,7 @@ import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 
 const ImageCarousel = () => {
   return (
-    <div className="container mx-auto p-10 rounded-2xl h-[90vh] w-full">
+    <div className="container mx-auto p-10  rounded-2xl h-[90vh] w-full">
       <Swiper
         spaceBetween={30}
         effect={'fade'}
@@ -26,7 +26,7 @@ const ImageCarousel = () => {
           pauseOnMouseEnter: true,
         }}
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
-        className="mySwiper cursor-pointer rounded-2xl"
+        className="mySwiper  cursor-pointer rounded-2xl"
       >
         <SwiperSlide>
           <img
