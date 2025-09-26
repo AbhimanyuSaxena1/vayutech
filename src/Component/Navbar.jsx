@@ -19,32 +19,31 @@ const Navbar = () => {
 
     const tl = gsap.timeline();
 
-    // Logo animation
-    // tl.to(logo, {
-    //   opacity: 1,
-    //   duration: 0.01,
-    //   delay: 0, // Delay to sync with loader
-    // });
-
-    // Stagger animation for links and button
+    // Animate logo first for stable initial render
     tl.fromTo(
-      [...links, button],
-      {
-        y: -100,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: 0.3,
-      }
+      logo,
+      { y: -40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' }
+    );
+
+    // Then animate nav links in defined order, then CTA button
+    tl.fromTo(
+      links,
+      { y: -40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, stagger: 0.15, ease: 'power2.out' },
+      '>-0.1'
+    );
+    tl.fromTo(
+      button,
+      { y: -40, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' },
+      '>-0.05'
     );
   }, []);
 
   return (
     <div className='w-full '>
-    <nav className="w-full h-[10vh] bg-white text-black  flex items-center justify-between px-10 py-4">
+    <nav className="w-full h-[10vh] bg-[#0b0b0f] text-white  flex items-center justify-between px-10 py-4">
       <div className="logo w-1/3 h-full flex items-center">
         <div ref={logoRef} className="image w-25 ">
           <img src="/logo.png" className="h-full w-full" alt="" />
@@ -54,43 +53,43 @@ const Navbar = () => {
         <Link
           ref={(el) => (linksRef.current[0] = el)}
           className="hover:text-[rgb(241,197,37)] text-xl  hover:scale-110 transition-all duration-200"
-          to="/services"
-        >
-          Services
-        </Link>
-        <Link
-          ref={(el) => (linksRef.current[1] = el)}
-          className="hover:text-[rgb(241,197,37)] text-xl  hover:scale-110 transition-all duration-200"
           to="/"
         >
           Home
         </Link>
         <Link
+          ref={(el) => (linksRef.current[1] = el)}
+          className="hover:text-[rgb(241,197,37)] text-xl  hover:scale-110 transition-all duration-200"
+          to="/services"
+        >
+          Services
+        </Link>
+        <Link
           ref={(el) => (linksRef.current[2] = el)}
           className="hover:text-[rgb(241,197,37)] text-xl  hover:scale-110 transition-all duration-200"
-          to=""
+          to="/about"
         >
-          Company
+          About Us
         </Link>
         <Link
           ref={(el) => (linksRef.current[3] = el)}
           className="hover:text-[rgb(241,197,37)] text-xl  hover:scale-110 transition-all duration-200"
-          to=""
+          to="/contactus"
         >
-          Home
+          Contact
         </Link>
       </div>
       <div className="contact  w-1/3 h-full flex items-center justify-end">
-   <Link to="/contactus " className='hidden md:block hover:scale-105 transition-all duration-75 hover:-translate-y-1'>
+   <Link to="/contactus" className='hidden md:block hover:scale-105 transition-all duration-75 hover:-translate-y-1'>
         <button
           ref={buttonRef}
-          className="px-3 py-2 cursor-pointer  bg-[#FFCF14] rounded-lg"
+          className="px-3 py-2 cursor-pointer  bg-[#FFCF14] text-black rounded-lg"
         >
           Contact
         </button>
    </Link>
     <div className="md:hidden">
-          <button className="text-black hover:text-blue-300 focus:outline-none" onClick={handleBurgerClick}>
+          <button className="text-white hover:text-yellow-300 focus:outline-none" onClick={handleBurgerClick}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>

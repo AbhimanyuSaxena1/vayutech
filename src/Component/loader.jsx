@@ -55,7 +55,7 @@ const Loader = () => {
   return (
     <div
       ref={loaderRef}
-      className="fixed inset-0 z-50 flex items-center bg-white justify-center "
+      className="fixed inset-0 z-50 flex items-center bg-[#0b0b0f] justify-center "
     >
       <img
         ref={logoRef}

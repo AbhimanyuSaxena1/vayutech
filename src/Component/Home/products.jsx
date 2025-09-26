@@ -27,9 +27,10 @@ const ProductCard = ({ imageSrc, videoSrc, title }) => {
 
   return (
     <div
-      className="group flex flex-col relative items-start p-4 justify-end w-full h-[50vh] rounded-lg shadow-md border border-transparent cursor-pointer overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl  transform hover:scale-105"
+      className="group flex flex-col relative items-start p-4 justify-end w-full h-[50vh] rounded-lg shadow-md border border-transparent cursor-pointer overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl transform hover:scale-105"
       onMouseEnter={handleTogglePlay}
       onMouseLeave={handleMouseLeave}
+      onClick={handleTogglePlay}
     >
       <img
         src={imageSrc}
@@ -61,48 +62,48 @@ const productsData = [
   {
     title: 'Agriculture',
     imageSrc:
-      'service1.jpg',
-    videoSrc: '/videos/agriculture.mp4' ,
+      'Drone1.png',
+    videoSrc: '/videos/record.mp4' ,
   },
   {
     title: 'Construction',
     imageSrc:
       'service2.jpg',
-    videoSrc: '/videos/agriculture.mp4' ,
+    videoSrc: '/videos/record.mp4' ,
   },
   {
     title: 'Disaster Management, Mapping & Survey',
     imageSrc:
       'service3.jpg',
-    videoSrc :'/videos/agriculture.mp4' ,
+    videoSrc :'/videos/record.mp4' ,
   },
   {
     title: 'Consultation & Training',
     imageSrc:
       'service1.jpg',
-    videoSrc: '/videos/agriculture.mp4' ,
+    videoSrc: '/videos/record.mp4' ,
   },
 ];
 
 const Products = () => {
   return (
-    <section className="w-full relative p-10 flex gap-10 min-h-[100vh]">
+    <section className="w-full relative p-6 sm:p-10 flex flex-col lg:flex-row gap-8 lg:gap-10 min-h-[100vh]">
       <div
-        className="absolute inset-0 bg-[url('droneBG.jpg')] bg-cover bg-center z-0"
+        className="absolute inset-0 bg-[url('Drone1.png')] bg-cover bg-center z-0"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-white via-black/10 blur-sm to-white/0 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0f] via-black/40 to-transparent z-10" />
 
-      <div className="left w-1/2 flex flex-col items-start justify-center p-10 h-[30vw] z-20 sticky top-35">
-        <h1 className="text-[6.5rem] font-light text-black">
-          Our <span className="text-yellow-300"> Services</span>
+      <div className="left w-full lg:w-1/2 flex flex-col items-start justify-center p-6 lg:p-10 h-auto lg:h-[30vw] z-20">
+        <h1 className="text-[2.25rem] sm:text-[3.5rem] lg:text-[6.5rem] leading-tight font-light text-white">
+          Our <span className="text-[#ffcf14]"> Services</span>
         </h1>
-        <p className="text-[1.5rem] font-light text-black/40 ml-2">
+        <p className="text-[1rem] sm:text-[1.25rem] lg:text-[1.5rem] font-light text-gray-400 ml-1 lg:ml-2 mt-2 lg:mt-0">
           Explore the services we offer with precision, reliability, and a passion
           for excellence.
         </p>
       </div>
 
-      <div className="right z-20 w-1/2 p-10 gap-10 flex flex-col items-center justify-between">
+      <div className="right z-20 w-full lg:w-1/2 p-4 sm:p-6 lg:p-10 gap-6 lg:gap-10 flex flex-col items-center justify-between">
         {productsData.map(({ imageSrc, videoSrc, title }, index) => (
           <ProductCard
             key={index}

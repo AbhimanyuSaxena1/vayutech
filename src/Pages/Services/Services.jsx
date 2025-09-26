@@ -77,12 +77,20 @@ const Services = () => {
     <main className='w-full min-h-[90vh] '>
       <article className='w-[100%] p-10  flex flex-col leading-nonr md:h-[40vh] h-[20vh] py-10  lg:h-[40vh]'>
           <h1 className='text-black text-[1rem] px-3 py-1 bg-yellow-400 w-fit rounded-full font-left font-[Antonio]  '>Our Services</h1>
-            <h1 className='exp text-[2rem] md:text-[7rem] lg:text-[7rem] text-black font-extralight font-[Antonio]'>Explore Full Range of Our Products</h1>
+            <h1 className='exp text-[2rem] md:text-[7rem] lg:text-[7rem] text-white font-extralight font-[Antonio]'>Explore Full Range of Our Products</h1>
       </article>
-      <section className='py-10 flex flex-wrap items-center justify-center gap-10 px-10 min-h-[50vh] mx-auto max-w-xl-screen'>
+      <section className='py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-stretch justify-items-center gap-6 px-4 sm:px-6 lg:px-10 min-h-[50vh] mx-auto max-w-xl-screen w-full'>
        {
         services.map((service, index) => (
-          <ServiceCard key={index} id={index} image={service.image} title={service.title} link={service.link} description={service.description} />
+          <ServiceCard
+            key={index}
+            id={index}
+            image={service.image}
+            title={service.title}
+            link={service.link}
+            description={service.description}
+            videoSrc={service.videoSrc}
+          />
         ))
        }
       </section>

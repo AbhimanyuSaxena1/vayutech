@@ -25,8 +25,8 @@ const ServiceDetails = () => {
             {description}
             </p>
             <div className="btn w-full flex items-center justify-start">
-             <button className="  !font-bold !p-2 !rounded-md  ">
-            <Link style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}} href="https://vayuroboticss.vercel.app/brochures/sample-brochure.pdf"
+            <button className="  !font-bold !p-2 !rounded-md  ">
+            <a style={{boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px"}} href="https://vayuroboticss.vercel.app/brochures/sample-brochure.pdf"
   download
   target="_blank"
   rel="noopener noreferrer" className=" overflow-hidden relative group group-hover:text-black  hover:-translate-y-1 hover:scale-105 transition-all duration-300 flex items-center gap-2  !text-lg bg-black !font-bold !px-4 !py-4  !rounded-md   !w-fit !h-fit">
@@ -35,7 +35,7 @@ const ServiceDetails = () => {
 <CiCircleChevDown className='rotate-[-90deg] z-2 text-2xl text-white group-hover:rotate-[0deg] group-hover:scale-110 transition-all duration-200 group-hover:text-black' />
 
               <div className="absolute z-1 top-0 left-0 w-[110%] h-full bg-white -translate-x-100   group-hover:translate-x-0  transition-all duration-800"></div> 
-          </Link>
+          </a>
             </button>
             </div>
             </div>
