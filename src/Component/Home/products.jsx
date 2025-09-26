@@ -86,14 +86,14 @@ const productsData = [
 
 const Products = () => {
   return (
-    <section className="w-full relative p-10 flex gap-10 min-h-[100vh]">
+    <section className="w-full relative  md:p-10  md:flex flex-col md:flex-row  md:gap-10  min-h-[270vh]  md:min-h-[100vh]">
       <div
-        className="absolute inset-0 bg-[url('droneBG.jpg')] bg-cover bg-center z-0"
+        className="absolute  inset-0 bg-[url('droneBG.jpg')] bg-cover bg-center z-0"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-white via-black/10 blur-sm to-white/0 z-10" />
 
-      <div className="left w-1/2 flex flex-col items-start justify-center p-10 h-[30vw] z-20 sticky top-35">
-        <h1 className="text-[6.5rem] font-light text-black">
+      <div className="left p-6 w-full md:w-1/2 flex flex-col items-start justify-center mt-20 md:p-10 h-[30vw] z-20 absolute top-20 md:sticky  md:top-35">
+        <h1 className="text-[5.5rem] md:text-[6.5rem] font-light text-black">
           Our <span className="text-yellow-300"> Services</span>
         </h1>
         <p className="text-[1.5rem] font-light text-black/40 ml-2">
@@ -102,7 +102,7 @@ const Products = () => {
         </p>
       </div>
 
-      <div className="right z-20 w-1/2 p-10 gap-10 flex flex-col items-center justify-between">
+      <div className="right z-20 w-full absolute md:relative top-100 md:top-0 md:w-1/2 p-10 gap-10  flex flex-col items-center justify-between">
         {productsData.map(({ imageSrc, videoSrc, title }, index) => (
           <ProductCard
             key={index}
