@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
+import Magnet from '../Component/Ui/Magnet'
 
 const Navbar = () => {
   const logoRef = useRef(null);
@@ -54,30 +55,43 @@ const Navbar = () => {
 
         {/* Links (desktop/tablet only) */}
         <div className="hidden md:flex justify-center w-1/3 space-x-5 lg:space-x-8">
-          <Link
+        <Magnet padding={50} disabled={false} magnetStrength={6}>
+            <Link
             ref={el => (linksRef.current[0] = el)}
             className="hover:text-yellow-400 text-base lg:text-xl hover:scale-110 transition-all duration-200"
             to="/"
-          >Home</Link>
+          >Home
+          </Link>
+        </Magnet>
+        <Magnet padding={50} disabled={false} magnetStrength={6}>
+
           <Link
             ref={el => (linksRef.current[1] = el)}
             className="hover:text-yellow-400 text-base lg:text-xl hover:scale-110 transition-all duration-200"
             to="/services"
           >Services</Link>
+        </Magnet>
+        <Magnet padding={50} disabled={false} magnetStrength={6}>
+
           <Link
             ref={el => (linksRef.current[2] = el)}
             className="hover:text-yellow-400 text-base lg:text-xl hover:scale-110 transition-all duration-200"
             to="/about"
           >About Us</Link>
-          {/* <Link
+        </Magnet>
+        <Magnet padding={50} disabled={false} magnetStrength={6}>
+
+          <Link
             ref={el => (linksRef.current[3] = el)}
             className="hover:text-yellow-400 text-base lg:text-xl hover:scale-110 transition-all duration-200"
             to="/contactus"
-          >Contact</Link> */}
+          >Contact</Link>
+        </Magnet>
+
         </div>
 
         {/* Contact Button (desktop/tablet only) */}
-        <div className="hidden md:flex items-center justify-end w-1/3">
+        {/* <div className="hidden md:flex items-center justify-end w-1/3">
           <Link to="/contactus" className='hover:scale-105 transition-all duration-75 hover:-translate-y-1'>
             <button
               ref={buttonRef}
@@ -86,7 +100,7 @@ const Navbar = () => {
               Contact
             </button>
           </Link>
-        </div>
+        </div> */}
 
         {/* Burger menu button (mobile only) */}
         <div className="md:hidden flex items-center justify-end w-1/2">

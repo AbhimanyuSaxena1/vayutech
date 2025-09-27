@@ -38,24 +38,26 @@ const Loader = () => {
         duration: 1,
         ease: 'power2.inOut',
       })
-      .to(logo, {
-        top: '5%', // Move to the top left corner (adjust as needed)
-        left: '5.9%',
+      // .to(logo, {
+      //   top: '5%', // Move to the top left corner (adjust as needed)
+      //   left: '5.9%',
         
-        duration: 1,
-        ease: 'power2.inOut',
-      })
+      //   duration: 1,
+      //   ease: 'power2.inOut',
+      // })
       .to([ loader], {
         opacity: 0,
-        duration: 1.9,
+        duration: 1,
+        transition: 'all',
         ease: 'power2.inOut',
+
       });
   }, []);
 
   return (
     <div
       ref={loaderRef}
-      className="fixed inset-0 z-50 flex items-center bg-[#0b0b0f] justify-center "
+      className="fixed inset-0 z-50 flex items-center bg-white justify-center "
     >
       <img
         ref={logoRef}
