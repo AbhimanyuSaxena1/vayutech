@@ -115,8 +115,8 @@ const Products = () => {
         min-h-[100vh]
       "
     >
-      <div className="absolute inset-0 bg-[url('droneBG.jpg')] bg-cover bg-center z-0" />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0b0b0f] via-black/40 to-transparent z-10" />
+      <div className="absolute hidden inset-0 bg-[url('droneBG.jpg')] bg-cover bg-center z-0" />
+      <div className="absolute hidden inset-0 bg-gradient-to-r from-[#0b0b0f] via-black/40 to-transparent z-10" />
 
       <div
         className="
@@ -125,7 +125,7 @@ const Products = () => {
           flex flex-col items-start justify-center
           p-2 sm:p-6 md:p-10
           h-auto lg:h-[30vw]
-          z-20 sticky top-0
+          z-20 sticky top-30
           mb-6 lg:mb-0
         "
       >

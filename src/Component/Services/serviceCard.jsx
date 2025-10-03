@@ -11,8 +11,8 @@ const serviceCard = ({image, title, description, link, id, videoSrc}) => {
 
     const handleMove = (e) => {
         const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-        const x = (e.clientX - left) / width - 0.5;
-        const y = (e.clientY - top) / height - 0.5;
+        const x = (e.clientX - left) / width - 0.2;
+        const y = (e.clientY - top) / height - 0.2;
         setTilt({ x: y * -threshold, y: x * threshold });
     };
 
@@ -40,7 +40,7 @@ const serviceCard = ({image, title, description, link, id, videoSrc}) => {
     <Link to={`/services/${id}`}
     state={{ image, title, description, link, id }}>
         <div
-            className="group rounded-xl shadow-xl overflow-hidden transition-all duration-300 ease-in-out cursor-pointer w-full max-w-[22rem] bg-[#15161a] hover:shadow-2xl hover:-translate-y-1"
+            className="group rounded-xl shadow-xl overflow-hidden transition-all duration-300 ease-in-out cursor-pointer w-full max-w-[22rem] bg-white hover:shadow-2xl hover:-translate-y-1"
             onMouseEnter={handleMouseEnter}
             onMouseMove={handleMove}
             onMouseLeave={handleMouseLeave}
@@ -55,7 +55,7 @@ const serviceCard = ({image, title, description, link, id, videoSrc}) => {
                 <video
                     ref={videoRef}
                     src={videoSrc || '/videos/record.mp4'}
-                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${isPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                    className={`absolute pointer-none inset-0 w-full h-full object-cover transition-opacity duration-500 ${isPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                     muted
                     loop
                     playsInline
@@ -65,7 +65,7 @@ const serviceCard = ({image, title, description, link, id, videoSrc}) => {
                     {title}
                 </h3>
             </div>
-            <p className="text-sm px-4 py-4 text-gray-400">
+            <p className="text-sm px-4 py-4 text-gray-800">
                 {description}
             </p>
         </div>
